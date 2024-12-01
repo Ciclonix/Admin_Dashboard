@@ -47,23 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   --primary-color: rgb(0, 150, 255);
   --secondary-color: orange;
   --background-color: rgb(225, 225, 235);
-}
-
-.dummy_icon {
-  border: 1px solid;
-  flex: 0 1 auto;
-  height: 30px;
-  width: 30px;
-}
-
-.dummy_icon.big {
-  height: 50px;
-  width: 50px;
-}
-
-.dummy_icon.very_big  {
-  height: 75px;
-  width: 75px;
+  --profile-color: yellow;
 }
 
 body {
@@ -72,6 +56,33 @@ body {
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 180px 1fr;
   font-family: sans-serif;
+}
+
+.icon {
+  flex: 0 1 auto;
+  height: 30px;
+  width: 30px;
+}
+
+.icon.big {
+  height: 50px;
+  width: 50px;
+}
+
+.icon.very_big  {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+.user_pic {
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+.my_profile_pic {
+  background-color: yellow;
 }
 
 a {
@@ -100,9 +111,10 @@ a {
   gap: 20px;
 }
 
-.sidebar .dummy_icon {
+.sidebar .icon {
   grid-column: 1;
   justify-self: center;
+  fill: white;
 }
 
 .sidebar a {
@@ -154,7 +166,7 @@ a {
   align-content: center;
 }
 
-.user .dummy_icon {
+.user .icon {
   grid-row: 1 / 3;
 }
 
@@ -215,8 +227,20 @@ a {
   gap: 30px;
 }
 
-.icons .dummy_icon {
+.icons .icon {
   margin-top: 40px;
+}
+
+.icon.star {
+  background-image: url(./imgs/star-plus-outline.svg);
+}
+
+.icon.watch {
+  background-image: url(./imgs/eye-plus-outline.svg);
+}
+
+.icon.share {
+  background-image: url(./imgs/share-variant-outline.svg);
 }
 
 .announcements,
@@ -255,6 +279,6 @@ a {
   grid-template-rows: 1fr 1fr;
 }
 
-.user_trending .dummy_icon {
+.user_trending .icon {
   grid-row: 1 / 3;
 }
