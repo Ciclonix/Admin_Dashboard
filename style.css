@@ -47,7 +47,6 @@ h1, h2, h3, h4, h5, h6 {
   --primary-color: rgb(0, 150, 255);
   --secondary-color: orange;
   --background-color: rgb(225, 225, 235);
-  --profile-color: yellow;
 }
 
 body {
@@ -56,6 +55,16 @@ body {
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 180px 1fr;
   font-family: sans-serif;
+}
+
+a {
+  font-weight: 550;
+  text-decoration: none;
+  color: white;
+}
+
+p {
+  color: rgb(100, 100, 100);
 }
 
 .icon {
@@ -83,12 +92,6 @@ body {
 
 .my_profile_pic {
   background-color: yellow;
-}
-
-a {
-  font-weight: 550;
-  text-decoration: none;
-  color: white;
 }
 
 
@@ -173,8 +176,9 @@ a {
 .options {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  gap: 20px;
 }
 
 .options li {
@@ -190,11 +194,14 @@ a {
   box-shadow: 0px 3px 5px var(--shadow-color) inset;
   grid-column: 2;
   grid-row: 2;
-  padding: 20px;
+  padding: 30px;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 20px;
+  gap: 30px;
+}
+
+.title {
+  align-self: end;
 }
 
 .main .projects{
@@ -203,7 +210,7 @@ a {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2rem 1fr 1fr 1fr;
   justify-content: space-around;
-  gap: 20px;
+  gap: 15px;
 }
 
 .projects .title {
@@ -214,6 +221,7 @@ a {
   background-color: white;
   box-shadow: 2px 2px 5px var(--shadow-color);
   border-radius: 10px;
+  display: grid;
 }
 
 .projects .card {
@@ -221,7 +229,16 @@ a {
   border-left: 10px solid var(--secondary-color);
 }
 
+.projects p {
+  font-size: 1.1rem;
+}
+
+.projects h4 {
+  font-size: 1.2rem;
+}
+
 .projects .icons {
+  align-self: self-end;
   display: flex;
   justify-content: flex-end;
   gap: 30px;
@@ -247,18 +264,21 @@ a {
 .trending {
   display: grid;
   grid-template-rows: 2rem 1fr;
-  gap: 20px;
+  gap: 15px;
 }
 
 .announcements .card {
-  padding: 40px 30px;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  padding: 20px;
+  align-content: space-around;
 }
 
 .announcements .card div {
-  padding: 0px 15px;
+  padding: 15px;
   align-content: center;
+}
+
+.announcements p {
+  font-size: 0.9rem;
 }
 
 .middle {
@@ -267,16 +287,18 @@ a {
 }
 
 .trending .card {
-  padding: 20px 30px;
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  padding: 30px;
   align-items: center;
+  gap: 20px;
+}
+
+.trending p {
+  font-size: 1rem;
 }
 
 .user_trending {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 1fr;
 }
 
 .user_trending .icon {
